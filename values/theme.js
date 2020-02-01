@@ -11,5 +11,8 @@ export default {
         elevation: 7,
         borderRadius: 30
     },
+    actionButton: {
+        img: require('../assets/add.png')
+    }
 
 }

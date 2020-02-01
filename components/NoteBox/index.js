@@ -1,6 +1,6 @@
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
-import {parentSize} from '../../values/dimen';
+import {parentSize, WIDTH} from '../../values/dimen';
 import theme from "../../values/theme";
 
 export default () => {
@@ -10,9 +10,11 @@ export default () => {
 const styles = StyleSheet.create({
     wrapper: {
         height: theme.node.height,
-        width: parentSize,
+        // width: parentSize,
         backgroundColor: theme.node.backgroundColor,
         borderRadius: theme.node.borderRadius,
-        elevation: theme.node.elevation
+        elevation: theme.node.elevation,
+        marginVertical: 10,
+        marginHorizontal: WIDTH/30,
     }
 });
