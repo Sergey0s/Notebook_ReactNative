@@ -8,8 +8,25 @@ const initialState = {
 
 export default (state = initialState, action) => {
     switch (action.type) {
-
-        default: return {...state};
+        case 'addNoteAction': {
+            return {
+                ...state,
+                notes: [...state.notes, action.payload]
+            }
+        }
+        case 'editNoteAction' : {
+            const updatedState = {...state};
+                updatedState.notes[action.payload.index] = action.payload.note;
+            return {
+                ...state
+            }
+        }
+        case 'deleteNoteAction' : {
+            const updatedState = {...state};
+            updatedState.notes.splice(action.payload, 1);
+            return updatedState;
+        }
+        default: return {...state,};
     }
 
 };
