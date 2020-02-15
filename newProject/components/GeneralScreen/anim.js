@@ -4,5 +4,5 @@ export const translate = (prop, toValue, duration) => {
     Animated.timing(prop, {
         toValue,
         duration,
-    })
+    }).start(()=> console.log('Anim was started'));
 };
